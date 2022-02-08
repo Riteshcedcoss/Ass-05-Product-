@@ -1,65 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
-    <div id="wrapper">
-      <!-- form for user input -->
-      <form>
-        <label for="pid">
-          Product Id
-          <input
-            id="pid"
-            class="formElement"
-            type="text"
-            placeholder="enter id"
-        /></label>
-
-        <label for="pname"
-          >Product Name
-          <input
-            id="pname"
-            class="formElement"
-            type="text"
-            placeholder="enter name"
-        /></label>
-
-        <label for="price"
-          >Product Price
-          <input
-            id="price"
-            class="formElement"
-            type="text"
-            placeholder="enter price"
-        /></label>
-
-        <input
-          type="button"
-          class="btn"
-          onclick="addProduct()"
-          value="ADD PRODUCT"
-        />
-      </form>
-      <!-- error message -->
-      <p id="error"></p>
-
-      <!-- table -->
-      <div id="product">
-        <table>
-          <tr>
-            <th>Product Id</th>
-            <th>Product Name</th>
-            <th>Price</th>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <script src="index.js"></script>
+    <div class="container">
+        <h1>Product Log</h1>
+      <div class="form">
+        <form>
+            <div class="content">
+                <label for="id">Product Id</label>
+            <input type="text" name="id" id="id" />
+            </div>
+            <div class="content" >
+                <label for="name">Product Name</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div class="content">
+                <label for="price">Product Price</label>
+                <input type="number" name="price" id="price" min="1" />
+              </div>
+              <div class="content">
+                <input
+                  type="button"
+                  value="ADD PRODUCT"
+                  onclick="submitForm()"
+                  id="btn"
+                />
+              </div>
+              <div class="content">
+                <input
+                  type="button"
+                  value="UPDATE PRODUCT"
+                  onclick="update()"
+                  id="btn"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="content" id="table-div">
+            
+<table id="table">
+  <thread>
+    <tr>
+      <th>Product Id</th>
+      <th>Product Name</th>
+      <th>Product Price</th>
+  </tr>
+  </thread>       
+            </table>
+          </div>
+        </div>
+          </div>
   </body>
+  <script src="index.js" defer></script>
 </html>
