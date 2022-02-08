@@ -5,22 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="Stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <div id="container">
-    Product Id: <input type="text" name="fname" id="fname" /><br /><br />
-    Product Name: <input type="text" name="lname" id="lname" /><br /><br />
-    Product Price: <input type="text" name="age" id="age" /><br /><br />
-    <button onclick="addRow();" id="btn">Add Product</button><br /><br />
 
-    <table > 
-      <tr>
-        <th>ProductId</th>
-        <th>ProductName</th>
-        <th>ProductPrice</th>
-      </tr>
-     </table>
+  <body>
+    <div id="wrapper">
+      <!-- form for user input -->
+      <form>
+        <label for="pid">
+          Product Id
+          <input
+            id="pid"
+            class="formElement"
+            type="text"
+            placeholder="enter id"
+        /></label>
+
+        <label for="pname"
+          >Product Name
+          <input
+            id="pname"
+            class="formElement"
+            type="text"
+            placeholder="enter name"
+        /></label>
+
+        <label for="price"
+          >Product Price
+          <input
+            id="price"
+            class="formElement"
+            type="text"
+            placeholder="enter price"
+        /></label>
+
+        <input
+          type="button"
+          class="btn"
+          onclick="addProduct()"
+          value="ADD PRODUCT"
+        />
+      </form>
+      <!-- error message -->
+      <p id="error"></p>
+
+      <!-- table -->
+      <div id="product">
+        <table>
+          <tr>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Price</th>
+          </tr>
+        </table>
+      </div>
     </div>
     <script src="index.js"></script>
   </body>
