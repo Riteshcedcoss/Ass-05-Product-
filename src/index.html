@@ -1,57 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css" />
+    <title>jQuery</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <div class="container">
-        <h1>Product Log</h1>
-      <div class="form">
-        <form>
-            <div class="content">
-                <label for="id">Product Id</label>
-            <input type="text" name="id" id="id" />
-            </div>
-            <div class="content" >
-                <label for="name">Product Name</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div class="content">
-                <label for="price">Product Price</label>
-                <input type="number" name="price" id="price" min="1" />
-              </div>
-              <div class="content">
-                <input
-                  type="button"
-                  value="ADD PRODUCT"
-                  onclick="submitForm()"
-                  id="btn"
-                />
-              </div>
-              <div class="content">
-                <input
-                  type="button"
-                  value="UPDATE PRODUCT"
-                  onclick="update()"
-                  id="btn"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="content" id="table-div">
-            
-<table id="table">
-  <thread>
-    <tr>
-      <th>Product Id</th>
-      <th>Product Name</th>
-      <th>Product Price</th>
-  </tr>
-  </thread>       
-            </table>
-          </div>
-        </div>
-          </div>
+    <div id="wrapper">
+      <div id="add_product_form">
+        <label for="product_sku">
+          <span>Product Id</span>
+          <input type="text" name="product_sku" id="product_Id" />
+        </label>
+        <label for="product_name">
+          <span>Product Name</span>
+          <input type="text" name="product_name" id="product_name" />
+        </label>
+        <label for="product_price">
+          <span>Product Price</span>
+          <input type="text" name="product_price" id="product_price" />
+        </label>
+      
+        <p class="submit">
+          <input
+            type="button"
+            name="add_product"
+            id="add_product"
+            value="Add Product"
+            onclick="submitform()"
+          />
+        </p>
+        
+      </div>
+    
+      <div id="product_list">
+        <table>
+        
+          <tr >
+            <th >Id</th>
+            <th >Name</th>
+            <th >Price</th>
+          </tr>
+      
+          <tbody id="table_body"></tbody>
+        </table>
+      </div>
+    </div>
+    <div id="result"></div>
   </body>
-  <script src="index.js" defer></script>
+  <script src="index.js"></script>
 </html>
